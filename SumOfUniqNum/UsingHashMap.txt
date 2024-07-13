@@ -1,0 +1,44 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc = new Scanner(System.in);
+	    String s1 = sc.nextLine();//ss112334
+	       HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
+	    for(int i=0;i<s1.length();i++)
+	    {
+	         if(Character.isDigit(s1.charAt(i)))
+	        {
+	            char ch = s1.charAt(i);
+	            //System.out.println(ch);
+	            int a = Character.getNumericValue(ch);
+	            if(!map.containsKey(a))
+	             {
+	           map.put(a,1);
+	           }
+	           else 
+	            {
+	           
+	           map.put(a,map.get(a)+1);
+	           }
+	           
+	        }
+	    }
+	     System.out.println("Map"+map);
+	   int tot=0;
+	    for(int i : map.keySet())
+	    {
+	        if(map.get(i)==1)
+	        {
+	            tot=tot+i;
+	        }
+	    }
+	   
+	
+	   
+	   System.out.println(tot);
+	   //aa1bb21cc3245
+	   
+	}
+}
