@@ -1,4 +1,4 @@
-
+///BruteForce
 class Solution {
     public boolean hasDuplicate(int[] nums) 
     {
@@ -19,5 +19,24 @@ class Solution {
                  
           
           return b;
+    }
+}
+///Optimized
+
+class Solution {
+    public boolean hasDuplicate(int[] arr) 
+    {
+        boolean b = false;
+     Arrays.sort(arr);
+
+     for(int i=0;i<arr.length-1;i++)
+     {
+        if(arr[i]==arr[i+1])
+        {
+            b=true;
+            break;
+        }
+     }
+     return b;
     }
 }
