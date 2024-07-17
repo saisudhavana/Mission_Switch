@@ -22,7 +22,7 @@
   - [ ] Merge Sort
   - [ ] Quick Sort
 - [ ] Collection Framework
-  - [ ] ArrayList
+  - [x] ArrayList
   - [ ] Stack
   - [ ] Queue
   - [ ] LinkedList
