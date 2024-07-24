@@ -1,0 +1,41 @@
+class Solution {
+    public String minWindow(String s, String t)
+     {
+        String res = "";
+        for(int i = 0;i<s.length();i++)
+        {
+            String sub = "";
+            for(int j=i;j<s.length();j++)
+            {
+                   sub = sub+s.charAt(j);
+                   int c = 0;
+                   if(sub.length()>=t.length())
+                   {
+                     for(int k = 0;k<t.length();k++)
+                     {
+                        if(sub.contains(String.valueOf(t.charAt(k))))
+                        {
+                            c++;
+                        }
+                     }
+                   }
+                   if(c==t.length())
+                   {
+                    if(res.length()==0)
+                    {
+                          res = sub;
+                    }
+                    else 
+                    {
+                        if(sub.length()<res.length())
+                        {
+                            res = sub;
+                        }
+                    }
+                   }
+                   
+            }
+        }
+        return res;
+    }
+}
